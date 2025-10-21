@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Appointment;
 use Illuminate\Http\Request;
 use App\Models\Car;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +12,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view("admin.dashboard");
+        $appointments = Appointment::count();
+        $cars = Car::count(); 
+        return view("admin.dashboard", compact('appointments', 'cars'));
     }
     public function create()
     {

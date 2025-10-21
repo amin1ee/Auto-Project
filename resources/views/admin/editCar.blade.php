@@ -1,10 +1,14 @@
+@section('title')
+Auto bewerken
+@endsection
 <x-layout>
-    <div class="flex flex-row px-4 py-8 gap-8">
+    <div class="flex flex-row min-h-screen px-8 py-10 gap-8 bg-gray-200">
         <x-sideBareDash>
 
 
         </x-sideBareDash>
         <div class="flex-1 flex items-start justify-center">
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md mt-8">
         <form action="/admin/edit-cars/{{$car["id"]}}" method="POST" class="flex flex-col gap-4"
             enctype="multipart/form-data">
             @csrf
@@ -64,5 +68,6 @@
                 Auto bewerken
             </button>
         </form>
+        </div>
         </div>
 </x-layout>

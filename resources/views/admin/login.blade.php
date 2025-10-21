@@ -1,3 +1,6 @@
+@section('title')
+Login
+@endsection
 <x-layout>
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
         <form action="{{ route('login') }}" method="POST" class="bg-white p-8 rounded-2xl shadow-md w-full max-w-sm">

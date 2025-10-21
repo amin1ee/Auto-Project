@@ -1,5 +1,8 @@
+@section('title')
+Onze Auto's
+@endsection
 <x-layout>
-    <div class="flex flex-row px-4 py-8 gap-8">
+    <div class="flex flex-row min-h-screen px-8 py-10 gap-8 bg-gray-100">
         <x-sideBareDash>
 
 

@@ -41,8 +41,7 @@ Onze Auto's
                     </div>
 
                     <a href="/car/{{$car['id']}}"
-                        class="mt-4 inline-block bg-amber-600 hover:bg-amber-700 px-6 text-white py-3 rounded-lg font-semibold">Bekijk
-                        Car</a>
+                        class="mt-4 inline-block bg-amber-600 hover:bg-amber-700 px-6 text-white py-3 rounded-lg font-semibold">Bekijk</a>
                 </div>
                 @endforeach
 
