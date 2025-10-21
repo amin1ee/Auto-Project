@@ -15,14 +15,17 @@ Route::get('/car/{id}', [AutoController::class, 'show']);
 
 
 
-Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name("admin.dashboard");
-Route::get('/admin/create-cars', [DashboardController::class, 'create']);
-Route::get('/admin/edit-cars/{id}', [DashboardController::class, 'edit']);
-Route::post('/admin/edit-cars/{id}', [DashboardController::class, 'update']);
-Route::post('/admin/create-cars', [DashboardController::class, 'store']);
-Route::get('/admin/cars', [DashboardController::class, 'showCars'])->name("admin.cars");
-
-Route::delete('/admin/car/{id}', [DashboardController::class, 'destroy'])->name("admin.car.destoy");
+Route::middleware('auth')->prefix('admin')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/create-cars', [DashboardController::class, 'create']);
+    Route::post('/create-cars', [DashboardController::class, 'store']);
+    Route::get('/edit-cars/{id}', [DashboardController::class, 'edit']);
+    Route::post('/edit-cars/{id}', [DashboardController::class, 'update']);
+    Route::get('/cars', [DashboardController::class, 'showCars'])->name('admin.cars');
+    Route::delete('/car/{id}', [DashboardController::class, 'destroy'])->name('admin.car.destroy');
+    Route::get('/appointmenets', [AppointementController::class, 'appointment']);
+    Route::delete('/appointmenets/{id}', [AppointementController::class, 'destroy'])->name("appointments.destroy");
+});
 
 
 Route::get('/contact', [AppointementController::class, 'index']);
@@ -30,6 +33,6 @@ Route::post('/contact-send', [AppointementController::class, 'send'])->name("con
 
 
 
-Route::get('admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
+Route::get('admin/login', [AdminController::class, 'showLoginForm'])->name('login');
 Route::post('admin/login', [AdminController::class, 'login']);
 Route::post('admin/logout', [AdminController::class, 'logout'])->name('admin.logout');

@@ -40,15 +40,15 @@
                     <div class="mt-4 flex">
                         <a href="edit-cars/{{$car["id"]}}"
                             class=" mr-4 text-center w-24 bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition">
-                            Update
+                            Bewerken
                         </a>
-                        <form action="{{ route('admin.car.destoy', $car["id"])}}" method="POST">
+                        <form action="{{ route('admin.car.destroy', $car["id"])}}" method="POST">
                             @csrf
                             @method('DELETE')
 
 
                             <button type="submit"
-                                class="inline-block w-24 text-center bg-red-600  text-white font-semibold py-2 rounded-lg hover:bg-red-700 transition">Delete
+                                class="inline-block w-24 text-center bg-red-600  text-white font-semibold py-2 rounded-lg hover:bg-red-700 transition">Verwijderen
                             </button>
 
                         </form>

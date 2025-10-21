@@ -23,4 +23,15 @@ class AppointementController extends Controller
         Appointment::create($request->all());
         return back()->with('success', 'Bericht succesvol verzonden!');
     }
+    public function appointment()
+    {
+        $appointments = Appointment::all();
+        return view("admin.appointment", compact("appointments"));
+    }
+    public function destroy($id)
+    {
+        $appointment = Appointment::find($id);
+        $appointment->delete();
+        return redirect()->back()->with('success', 'appointment Deleted successfully!');
+    }
 }

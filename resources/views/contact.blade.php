@@ -3,8 +3,15 @@ Contact
 @endsection
 <x-layout>
     <x-nav>
+
     </x-nav>
     <div class="max-w-7xl mx-auto py-12 px-4">
+        @if(session('success'))
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+            {{ session('success') }}
+        </div>
+        @endif
+
 
         <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Contacteer ons</h1>
 
@@ -54,7 +61,7 @@ Contact
                         Verstuur bericht
                     </button>
 
-                     @foreach ($errors->all() as $error)
+                    @foreach ($errors->all() as $error)
                     <div>{{ $error }}</div>
                     @endforeach
                 </form>

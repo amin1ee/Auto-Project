@@ -9,7 +9,7 @@ class AutoController extends Controller
 {
     public function cars()
     {
-        $cars = Car::all();
+       $cars = Car::orderBy('created_at', 'desc')->paginate(15);
         return view("autos", compact("cars"));
     }
     public function show($id) {

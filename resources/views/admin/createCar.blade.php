@@ -4,8 +4,8 @@
 
 
         </x-sideBareDash>
-        <div class="">
-            <div class="max-w-md mx-auto bg-gray-100 p-6 rounded-lg shadow-md mt-8">
+        <div class="flex-1 flex items-start justify-center">
+            <div class=" bg-gray-100 p-6 rounded-lg shadow-md mt-8">
                 <h2 class="text-2xl font-bold mb-6 text-center">Add New Car</h2>
                 <form action="/admin/create-cars" method="POST" class="flex flex-col gap-4"
                     enctype="multipart/form-data">
@@ -68,7 +68,7 @@
 
 
                     <button type="submit"
-                        class="mt-4 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition-colors">
+                        class="mt-4 bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded transition-colors">
                         Auto toevoegen
                     </button>
                 </form>

@@ -4,6 +4,7 @@
 
 
         </x-sideBareDash>
+        <div class="flex-1 flex items-start justify-center">
         <form action="/admin/edit-cars/{{$car["id"]}}" method="POST" class="flex flex-col gap-4"
             enctype="multipart/form-data">
             @csrf
@@ -43,7 +44,8 @@
             <div class="flex flex-col">
                 <label for="apk" class="mb-1 font-semibold text-gray-700">Apk</label>
                 <input type="date" id="apk" name="apk"
-                    class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-600" value="{{$car["apk"]->format('Y-m-d')}}">
+                    class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-600"
+                    value="{{$car["apk"]->format('Y-m-d')}}">
             </div>
 
             <div class="flex flex-col">
@@ -58,8 +60,9 @@
 
 
             <button type="submit"
-                class="mt-4 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition-colors">
+                class="mt-4 bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded transition-colors">
                 Auto bewerken
             </button>
         </form>
+        </div>
 </x-layout>
