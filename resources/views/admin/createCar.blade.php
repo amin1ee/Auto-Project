@@ -16,19 +16,18 @@ Auto toevoegen
 
                     <div class="flex flex-col">
                         <label for="title" class="mb-1 font-semibold text-gray-700">Titel</label>
-                        <input type="text" id="title" name="title" placeholder="Type de naam van de auto" value="{{old("
-                            title")}}"
+                        <input type="text" id="title" name="title" placeholder="Type de naam van de auto" value="{{old("title")}}"
                             class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
                     </div>
 
                     <div class="flex flex-col">
                         <label for="mark" class="mb-1 font-semibold text-gray-700">Merk</label>
-                        <input type="text" id="mark" name="mark" placeholder="Audi..." value="{{old(" mark")}}"
+                        <input type="text" id="mark" name="mark" placeholder="Audi..." value="{{old("mark")}}"
                             class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
                     </div>
                     <div class="flex flex-col">
                         <label for="km" class="mb-1 font-semibold text-gray-700">K.m</label>
-                        <input type="text" id="km" name="km" placeholder="200000" value="{{old(" km")}}"
+                        <input type="text" id="km" name="km" placeholder="200000" value="{{old("km")}}"
                             class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
                     </div>
 
@@ -54,7 +53,7 @@ Auto toevoegen
 
                     <div class="flex flex-col">
                         <label for="price" class="mb-1 font-semibold text-gray-700">Prijs (€)</label>
-                        <input type="number" id="price" name="price" placeholder="9999.." value="{{old(" price")}}"
+                        <input type="number" id="price" name="price" placeholder="9999.." value="{{old("price")}}"
                             class="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-600">
                     </div>
                     <div class="flex flex-col">

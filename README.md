@@ -41,7 +41,11 @@ composer run dev
 or
 php artisan serve
 ```
+- For dashboard Admin 
 
+Visit: http://127.0.0.1:8000/admin/login
+email : test@example.com
+password : password
 
 
 
