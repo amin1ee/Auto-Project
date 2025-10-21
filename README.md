@@ -8,7 +8,7 @@ Clone the repository:
 
 
 ```bash
-git clone https://github.com/yourusername/auto-man.git
+git clone git@github.com:amin1ee/Auto-Project.git
 cd auto-man
 
 ```
